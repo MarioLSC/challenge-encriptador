@@ -8,9 +8,7 @@ function DesEncriptar(e) {
   e.preventDefault();
   encriptar();
   btnDesencriptar.addEventListener("click", () => {
-    // e.preventDefault();
-    let minuscula = textoInput.value.toLowerCase();
-    let nuevoTexto = minuscula.replace(
+    let texto = textoInput.value.replace(
       /enter|imes|ai|ober|ufat/g,
       function (letra) {
         if (letra === "enter") {
@@ -26,15 +24,13 @@ function DesEncriptar(e) {
         }
       }
     );
-    resultado.innerHTML = nuevoTexto;
+    resultado.innerHTML = texto;
     textoInput.value = "";
   });
 }
 
 function encriptar() {
-  // e.preventDefault();
-  let minuscula = textoInput.value.toLowerCase();
-  let nuevoTexto = minuscula.replace(/[aeiou]/g, function (letra) {
+  let texto = textoInput.value.replace(/[aeiou]/g, function (letra) {
     if (letra === "e") {
       return (letra = "enter");
     } else if (letra === "i") {
@@ -47,7 +43,7 @@ function encriptar() {
       return (letra = "ufat");
     }
   });
-  resultado.innerHTML = nuevoTexto;
+  resultado.innerHTML = texto;
   textoInput.value = "";
 }
 
