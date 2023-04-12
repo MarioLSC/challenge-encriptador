@@ -49,7 +49,6 @@ function encriptar() {
 
 espacio.addEventListener("click", () => {
   if (resultado.textContent !== "") {
-    navigator.clipboard.writeText(resultado.textContent);
-    alert(`Texto '${resultado.textContent}' copiado`);
+    textoInput.value = resultado.textContent;
   }
 });
