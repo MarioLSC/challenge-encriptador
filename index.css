@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(61, 113, 161);
+  font-family: "Schibsted Grotesk", sans-serif;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  background-color: #e2e2e2;
+  width: 70%;
+  height: 60vh;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+}
+
+h1 {
+  margin: 20px 0;
+  color: rgb(48, 48, 48);
+}
+
+.seccion input {
+  padding: 10px;
+  font-size: large;
+  border: none;
+  background-color: #e2e2e2;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  transition: 0.2s ease;
+}
+.seccion input:focus {
+  border-bottom: 3px solid rgb(61, 113, 161);
+  background-color: white;
+  outline: none;
+}
+
+.seccion .texto {
+  position: relative;
+  background-color: rgb(214, 214, 214);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  height: 150px;
+  width: 500px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.seccion .texto:hover{
+  background-color: rgb(189, 189, 189);
+}
+
+.texto::after {
+  content: attr(title);
+  display: none;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+.texto:hover::after {
+  display: block;
+}
+
+.seccion button {
+  width: 150px;
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+}
+
+.seccion .texto p {
+  font-weight: bold;
+  color: rgb(48, 48, 48);
+}
+
+.seccion .btnEncriptar {
+  background-color: rgb(61, 113, 161);
+  color: white;
+  font-size: 15px;
+}
+.seccion .btnDesencriptar {
+  border: 2px solid rgb(61, 113, 161);
+  color: rgb(61, 113, 161);
+  font-size: 15px;
+}
